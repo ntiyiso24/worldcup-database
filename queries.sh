@@ -1,6 +1,11 @@
 #! /bin/bash
 
-PSQL="psql --username=freecodecamp --dbname=worldcup --no-align --tuples-only -c"
+if [[ $1 == "test" ]]
+then
+  PSQL="psql --username=postgres --dbname=worldcuptest --no-align --tuples-only -c"
+else
+  PSQL="psql --username=freecodecamp --dbname=worldcup --no-align --tuples-only -c"
+fi
 
 # Do not change code above this line. Use the PSQL variable above to query your database.
 
